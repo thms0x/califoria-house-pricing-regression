@@ -8,22 +8,6 @@ The goal is to compare several regression models, evaluate them, and improve the
 
 The project uses the California Housing dataset from scikit-learn.
 
-Features include:
-
-- Median income
-- House age
-- Average rooms
-- Average bedrooms
-- Population
-- Average occupancy
-- Latitude
-- Longitude
-
-Target:
-
-- Median house value
-
-The target is expressed in units of $100,000.
 
 ## 2. Project Workflow
 
@@ -49,11 +33,12 @@ Analyze predictions
 
 ## 3. Models
 ### Dummy Regressor
-The DummyRegressor is used as a baseline. It ignores the input features and predicts a simple statistic such as the median target value for every sample. Its purpose is to show how much the real models improve over a prediction strategy that does not learn from the data.
+The DummyRegressor is used as a baseline.
+
 ### Linear Regression
-Linear regression models the target as a weighted sum of the input features. It is simple and easy to interpret, but it assumes that the relationship between the features and the target is mostly linear. This makes it less suitable when the data contains strong nonlinear relationships or feature interactions.
+Linear regression models the target as a weighted sum of the input features. 
 ### Random Forest
-A random forest combines many decision trees and averages their predictions. Each tree learns nonlinear rules from different subsets of the data, which helps reduce overfitting compared with a single decision tree. It works well on tabular data and can naturally model interactions between features.
+A random forest combines many decision trees and averages their predictions. Each tree learns nonlinear rules from different subsets of the data, which helps reduce overfitting compared with a single decision tree. 
 ### Histogram Gradient Boosting
 HistGradientBoostingRegressor builds decision trees sequentially, where each new tree tries to correct the errors made by the previous trees. It uses histogram-based splits to make training more efficient. This often gives better performance than random forests on structured data
 
